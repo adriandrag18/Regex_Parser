@@ -1,6 +1,6 @@
 # Tema3 LFA
 
-    Am folosit ANTLR pentru a genera parser-ul. Aceasta este gramatica pe care am folosit-o
+   Am folosit ANTLR pentru a genera parser-ul. Aceasta este gramatica pe care am folosit-o
 KLEENE : '*'+;
 REUNION: '|';
 OPEN : '(';
@@ -16,11 +16,11 @@ sub_expr: OPEN expr CLOSED;
 atom : variable | sub_expr;
 variable : VAR;
 
-    IN fisierul ERtoNFA am implemantat 3 functii care intorc nfa-uri echivalente cu expresia
+   In fisierul ERtoNFA am implemantat 3 functii care intorc nfa-uri echivalente cu expresia
 regulata obtinuta prin aplicarea unuia din cei 3 operatori pe expresiile regulate echivalente cu nfa
 -urile primite (un singur nfa primit in functia star()).
 
-    In clasa ERVisitorToNFA care mosteneste ERVisitor trec prin arborele de parsare a expresiei
+   In clasa ERVisitorToNFA care mosteneste ERVisitor trec prin arborele de parsare a expresiei
 regulate si construiesc un NFA echivalent.
     In metoda visitVariable intorc un nfa cu 2 stari si cu o tranzitie din starea initiala in cea
 finala pe caracterul din variabila.
@@ -34,5 +34,5 @@ nod daca c_expr nu reprezinta o concatenare.
 obtinut din functia reunion cu rezultatele vizitarii nodurilor c_expr sau rezultatul vizitarii
 nodului c_expr daca expresia nu era o reuniune.
 
-    Transformare NFA -> DFA este facuta in metoda from_nfa() din clasa DFA care explicata in
+   Transformare NFA -> DFA este facuta in metoda from_nfa() din clasa DFA care explicata in
 README-ul de la Tema 2.
